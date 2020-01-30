@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## 被子里的猫
 
-You can use the [editor on GitHub](https://github.com/tekan-0423/novel/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+被子里的猫（原创）
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[第一个故事](https://tekan-0423.github.io/novel/第一个故事-卡洛斯.html) 
+[第二个故事](https://tekan-0423.github.io/novel/第二个故事-杰里.html) 
+[第三个故事](https://tekan-0423.github.io/novel/第三个故事-克里斯的玫瑰.html) 
+[第四个故事](https://tekan-0423.github.io/novel/第四个故事-Antoine.html) 
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tekan-0423/novel/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
