@@ -1,6 +1,6 @@
 ## 拾年文
 
-玉草央（原创）
+
 
 [第一个故事](https://tekan-0423.github.io/novel/第一个故事-卡洛斯.html) 
 
