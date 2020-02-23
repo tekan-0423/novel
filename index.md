@@ -14,4 +14,6 @@
 
 [第六个故事](https://tekan-0423.github.io/novel/第六个故事-旅行的开篇.html) 
 
-[第七个故事](https://tekan-0423.github.io/novel/第七个故事-老太太.md) 
+[第七个故事](https://tekan-0423.github.io/novel/第七个故事-老太太.html) 
+
+[第八个故事](https://tekan-0423.github.io/novel/第八个故事-三段爱情.html) 
