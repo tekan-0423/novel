@@ -1,6 +1,7 @@
 ## 拾年 随记 
 
 
+被子里的猫
 
 
 [第一个故事](https://tekan-0423.github.io/novel/第一个故事-卡洛斯.html) 
@@ -18,3 +19,7 @@
 [第七个故事](https://tekan-0423.github.io/novel/第七个故事-老太太.html) 
 
 [第八个故事](https://tekan-0423.github.io/novel/第八个故事-三段爱情.html) 
+
+[第九个故事](https://tekan-0423.github.io/novel/第九个故事-我的故事.html) 
+
+[第十个故事](https://tekan-0423.github.io/novel/第十个故事-丁咛.html) 
