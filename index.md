@@ -23,3 +23,7 @@
 [第五篇](https://tekan-0423.github.io/novel/第九个故事-我的故事.html) 
 
 [第六篇](https://tekan-0423.github.io/novel/第十个故事-丁咛.html) 
+
+[第七篇](https://tekan-0423.github.io/novel/第十一个故事-阿丽斯.html) 
+
+[第八篇](https://tekan-0423.github.io/novel/第十二个故事-懂事.html) 
