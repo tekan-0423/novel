@@ -27,3 +27,8 @@
 [第七篇](https://tekan-0423.github.io/novel/第十一个故事-阿丽斯.html) 
 
 [第八篇](https://tekan-0423.github.io/novel/第十二个故事-懂事.html) 
+
+[第九篇](https://tekan-0423.github.io/novel/第十三个故事-修行.html) 
+
+[第十篇](https://tekan-0423.github.io/novel/第十四个故事-离别.html) 
+
