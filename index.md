@@ -33,7 +33,7 @@
 [第十篇](https://tekan-0423.github.io/novel/第十四个故事-离别.html) 
 
 
-[待续]
+[待续]() 
 --
 
 
