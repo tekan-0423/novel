@@ -32,6 +32,13 @@
 
 [第十篇](https://tekan-0423.github.io/novel/第十四个故事-离别.html) 
 
+[第十一篇](https://tekan-0423.github.io/novel/第十五个故事-Alex.html) 
+
+[第十二篇](https://tekan-0423.github.io/novel/第十六个故事-Ludivine.html) 
+
+[第十三篇](https://tekan-0423.github.io/novel/第十七个故事-万圣节.html) 
+
+
 
 [待续]() 
 --
