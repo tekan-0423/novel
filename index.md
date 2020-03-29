@@ -38,7 +38,9 @@
 
 [第十三篇](https://tekan-0423.github.io/novel/第十七个故事-万圣节.html) 
 
+[第十四篇](https://tekan-0423.github.io/novel/第十八个故事-疗伤.html) 
 
+[第十五篇](https://tekan-0423.github.io/novel/第十九个故事-疯子Jack.html) 
 
 [待续]() 
 --
