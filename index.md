@@ -42,6 +42,11 @@
 
 [第十五篇](https://tekan-0423.github.io/novel/第十九个故事-疯子Jack.html) 
 
+[第十六篇](https://tekan-0423.github.io/novel/第二十个故事-中国城.html) 
+
+[第十七篇](https://tekan-0423.github.io/novel/第二十一个故事-四个月的恋人.html) 
+
+
 [待续]() 
 --
 
