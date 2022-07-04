@@ -1,0 +1,818 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #2d2d2d;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#999999;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #66cccc;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%2366cccc' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #f99157;
+}
+.markdown-body em{
+  color: #ffcc66;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #99cc99;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#99cc99;stroke: #99cc99;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #999999;
+  vertical-align: middle;
+  background-color: #333333;
+  border: 1px solid #494949;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #494949;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #9b9b9b;
+  border-left: .25em solid #f2777a;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #434343;
+  color: #66cccc;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #66cccc;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #66cccc;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #66cccc;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #66cccc;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #66cccc;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #717171;
+}
+
+.markdown-body table tr {
+  background-color: #2d2d2d;
+  border-top: 1px solid #717171;
+}
+
+.markdown-body table th {
+  background-color: #434343;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #323232;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #333333;
+  color: #999999;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #999999;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #494949;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #333333;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #48be66;
+}
+
+.token.punctuation {
+    color: #8b86c9;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #8b86c9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #e6424b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #c33795;
+}
+
+.token.function,
+.token.class-name {
+    color: #67878e;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d38e63;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #6b6b6b;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #6b6b6b;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script>window.MathJax = {     tex: { tags: 'ams', inlineMath: [ ['$','$'], ['\\(','\\)'] ] },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="%E6%B9%96%E8%BE%B9%E7%9A%84%E5%85%AC%E5%AF%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>湖边的公寓</h1>
+<p>我租了湖边的一间公寓，虽然是极其简单的一室一厅，但对于我一个人来说够用了。</p>
+<p>公寓位于22层，透过阳台的玻璃窗便可看到宽阔的湖面，在这座城市里，有百来个大大小小的湖泊，面前这片是最大的一个。</p>
+<p>站在楼房高层的窗口往外看，城市里的湖泊却并不像个湖泊。那是一片很奇幻的世界，现实与魔幻交织的入口，人为改造的景观和楼宇深深地向着湖的心脏侵蚀，湖水像被激怒的巨大异形怪兽，将利爪伸向陆地。</p>
+<p>巨兽与人类的交锋随着时间流逝不停变化，湖泊交替呈现出红色、橙色、不同程度的蓝色和灰色，以及各种五彩夺目的颜色混合，张扬地显示着怪兽的情绪。而人类建筑丝毫不为所动，高高的建筑群漠然地排好阵列，凝望着湖水，凝重得像厚重机械外壳上的铆钉。</p>
+<p>我常常坐在靠窗的阳台发呆，静静抽一支烟，看着天空、压低的云层和笼罩在城市上空的一层壳似的淡灰色雾气。</p>
+<p>我从与女友合租的家里搬出来已经2个月了。我是来到这个城市之后认识她的，仔细回想一下已经有了4年时间，多亏了她，帮我度过了最初来到这个陌生城市的孤独时光。</p>
+<p>搬到一起住是一年多前的事情，我们在离我办公室不远的小区里租了一间小房，她当时在准备考试，我在忙着挽救自己濒临破产的公司。鉴于我们正式交往已经有了一年时间，都觉得应该往下发展，合住在一起是个好选项，而且花销还会节省一些。</p>
+<p>尽管手头上不阔绰，我们还是认真布置了房间，购置了家具和电器，采购了生活必需品，手挽手走在宜家的样板间里，想象着属于自己的小房间里未来的模样，这是最开心的过程。</p>
+<p>没多久，公司的经营问题越来越严重，为了找到新的出路，我开始投入更多的时间应酬，参加更多的酒局，跑到更远的地方去寻找机会。后来发现大家仅仅是聚在一起吹吹牛而已，距离真正的业务十万八千里。不仅仅没有任何转机，却花费了大把的时间和金钱，还招惹一堆麻烦人和麻烦事。</p>
+<p>等到发现公司已经没有财力继续在外面瞎折腾之后，我就在这个小房子里烦闷着无所事事。我相信眼下的最后几个商机，总有一个能够力挽狂澜，一定可以让我重新振作，只需要耐心等待对方的回复即可。</p>
+<p>虽然女友没有发表任何关于我的工作的评论，只是默默准备自己的考试，收拾房间，买菜做饭。但家里这样那样的矛盾却越积越多，大大小小的争吵似乎从没停止过。我对她考试的情况一无所知，甚至关于她考试通过的消息，也是通过她的朋友圈得知。</p>
+<p>从得知安托万消息的那一天之后，我就开始埋头写作，拒绝了所有的社交，也没有与女友说话，只是坐在飘窗的小桌前自顾自的敲打着键盘，好像必须要完成这份工作一样。</p>
+<p>甚至当女友跟我提出分手的时候，我也只是轻轻“嗯”了一声，又回到了自己的电脑面前……</p>
+<p>我搬出去的那天，天气压抑到了极点，眼看窗外积压了厚厚的黑云，气压低得让人喘不过气来，胸口很憋闷，湿热的天气让人坐也不是站也不是。我从冰箱里拿出一罐冰啤酒，一边喝一边收拾行李。很多衣服都是刚来这个城市时买的，穿了好几年也该扔掉了，有几件上面印着初创公司logo的T恤我留了下来，女友给我买的衣服，我犹豫了一下，最终还是没有拿，留在床脚。也许是自尊心在作怪。</p>
+<p>我把行李塞进车子后备箱和后座。属于自己的东西不多，连这辆小车都没有塞满，就在发动引擎的那一刻，硕大的雨滴就啪地一声，结结实实地打在车前挡风玻璃上，发出沉闷的一声，声音之大吓了我一跳，车还没拐出停车场，雨幕就完全笼罩了整个世界。</p>
+<p>尽管雨刷已经开到最大档，我还是不得不把眼睛贴着前窗玻璃，只有这样紧紧盯着，才能从雨水缝隙中看见露出的路面。水幕捶打车身发出沉闷的声响，隔绝了外面其他的一切声音。</p>
+<p>正常可能只需要20分钟的路程，开了一个小时才开到新的公寓。顶着瓢泼的大雨将行李一趟一趟搬入电梯，再全部堆在新客厅的一角。当我去各房间开窗通风的时候，却发现雨已经停了。</p>
+<p>“在车里多坐一会就好了啊，哎。”</p>
+<p>胡乱抓了条毛巾把身上擦干。点了一支烟，坐在阳台的窗户下，看着外面的湖水、天空、压低的云层，还有远处城市上方壳一样灰蒙蒙的水雾。</p>
+<p>“刚刚那听啤酒还没喝几口呢，她会接着喝完，还是扔掉？啤酒瓶下没有放杯垫，会凝上一圈水，不知道她会不会想到去擦干……”<br />
+“留下来的那些衣服还蛮好的，扔在那里，其实挺尴尬的，不知道她会不会觉得挺伤人呢？”<br />
+“这间房子里，新的男主人什么时候会住进来？睡我睡过的床，在我吃饭的地方吃饭……”</p>
+<p>————————————————</p>
+<p>我在出租屋里心无旁骛地继续未完成的小说，《记忆储藏间》这本小说的情节已经进入高潮，我觉得终局已经在并不遥远的地方。</p>
+<p>每天早上，我很早就起床，因为窗帘一直懒得买，所以早晨5点透亮的天空一定能把我叫醒。洗漱过后，冲杯咖啡，然后就下楼在湖边跑步。夏天的晨风宜人，大脑吸饱了氧气，跑到饥肠辘辘之后，再找个地方吃早饭。</p>
+<p>楼下小卖部的小姑娘对我很和善，我来店里的时候，她总会跟我攀谈几句，她是个大学生，大四了，暑期过来帮爸妈看店。旁边的烧烤店里是一家东北夫妻，挺和睦的，儿子上大学去了。早餐店里是两个剃光了头的年轻小伙子，兄弟俩，人很开朗，面条做的非常不错。</p>
+<p>到了9点钟，我回到阳台的窗口下，开始了一天的工作。我不知道这算不算是一个工作，因为没有报酬，也没有客户，只是自己想这么做而已。饿了就去楼下吃个简单的饭菜。困了就倒在沙发上睡一觉。现在是夏季，但是一点都不热，屋子两边通风，湖风像野猫一样，灵敏地穿过卧室和客厅，从阳台上溜走，发出呼呼的回响。</p>
+<p>我养了一些绿植，是小卖部的小姑娘送给我的。只是几盆绿萝而已，她说放在店里的角落里，见不着阳光，要死不活的，问我想不想拿走。我很乐意地拿走了。在我的悉心照料下，马上重新焕发生机，长出一大片新绿的嫩叶，一直铺到地上好长。我掐了几根长得不错的枝条，插在一个透明水瓶里，送去小卖部，小姑娘放在小卖部的柜台旁边，没几天就长出了根系。</p>
+<p>晚饭的时间，我已经重新开始学着自己做菜，味道还不错，只要天不那么热，花一点时间在厨房里并没有让我觉得难受。喝点冰啤酒，吹吹湖风，一个人的生活并没有想象中那么枯燥，我甚至觉得可以一辈子这样下去。</p>
+<p>我盘算了一下，自己的账上还有一些钱，国外的银行里还有一些之前的积蓄没有动。即使这样下去，一年内没有工作都可以承受得起。现在只想写完小说，其他的先不想考虑。</p>
+<p>每隔那么几天，脑子里就会极度疲乏，不愿意再思考小说里的情节，我就那样在阳台下静静地抽烟，看一部电影，喝点啤酒，或者就是简单的发呆。一般情况下，第二天就能够恢复正常，继续写下面的情节。</p>
+<p>但这次非常不一样，已经是第三天没有写一个字出来了。</p>
+<p>写了一两句话也都全部删掉，完全驴唇不对马嘴。这三天里，即使什么像样的东西都写不出来，我依然努力继续之前的作息习惯，强迫自己坐在窗下写点东西，但就是无能为力。无名之火陡然升起，但却无处发泄，连个争吵或者怪罪的人都没有。</p>
+<p>到了第三天，我在湖边走了一上午，午饭完全没有胃口，下午又开始在房间里来回踱步。</p>
+<p>最后折腾得累了，我就坐在窗下，盯着远处下方那个湖泊巨怪，思考我是如何一步一步到了今天这个地方。啤酒一瓶一瓶的喝，烟一根一根的抽。仍然无法想出一个像样的句子来。</p>
+<p>窗外的景色最开始时阳光灿烂，像一整块干净的毛玻璃。恍惚间，夕阳在湖面上放了一个巨大的焰火，焰火召唤出来的黑暗笼罩了大地。华灯初上，远远的地面上火蛇从白天不可见的洞穴中钻出开始舞动，星星点点的灯光宣告人间的盛筵开启。</p>
+<p>我把屋里的灯点亮，玻璃窗上随即映射出一张脸，我注视着那张脸，那张脸也在注视着我，似乎并不是我的投影。湖泊巨怪在那张脸背后的阴影中潜伏，火蛇在远处集体安静下来，屏息静气地伺机等待。</p>
+<p>“我写不下去了……” 我很灰心地说。</p>
+<p>“那就是时间到了。” 那张脸回答我。</p>
+<p>“什么时间……我不明白。”</p>
+<p>“跟我来……”</p>
+<p>那张脸在22层楼的窗外对我似有似无地点了点头。外面是黑漆凝固般的夜色，楼下是一条马路，马路的对面，便利店的小姑娘在店内无聊地玩手机，烧烤店有一桌客人喝着啤酒，老板在炭火前汗如雨下，老板娘在忙着洗小龙虾，早餐店里的两个年轻老板在和朋友们打麻将。</p>
+<p>我把手伸向那张脸，他也朝我伸手过来。指尖触碰的一刹那，湖泊巨怪一跃而起，火蛇突然惊醒开始疯狂乱舞，每次心跳都是胸膛里撼天动地的爆炸，披着蓝色火焰的马群在江河中奔腾，古老的宇宙粒子沿着无数条血管涌向时间的尽头，焰火的巨大光辉倾泻而下，洒在清澈的眼眸里……</p>
+<p>——————————————</p>
+<p>三个月后，天气渐凉，新书顺利出版，作为我的第一本小说，也是20万字的长篇小说，我自然没有很大信心。期间也经过再三犹豫，但还是托了朋友的关系，找了家经纪公司帮我联系合适的出版社。经过几轮不大的修改，顺利通过三审三校，《记忆储藏间》这本书就这样面世了。</p>
+<p>收到样书的那一天，我在手里把玩着这不薄不厚的一本东西，有点陌生，像一块从深海里打捞出来的沉船遗骸，有点难以将它和我自己联系起来。翻看了几页，才能将写作时的情形回想起来。</p>
+<p>当晚，自斟自饮开了一瓶红酒，半睡半醒之间，安托万果然如预想的那样来了。</p>
+<p>“作为小说家，感觉怎么样？”</p>
+<p>他站在巴黎街头的一家咖啡馆门口，夕阳比上次见他时更倾斜了一些，他在咖啡馆门外的凉棚下找了个椅子落座，热情地招呼我坐在他旁边。我们之间隔着一个小圆咖啡桌。墨绿色的桌面，包着一圈铝边，桌上有个小烟灰缸，铜制的，里面被擦拭得干干净净，除此之外，桌上什么都没有。</p>
+<p>“写完了，出版了，有种裸体走进商场里的感觉。任由其他人评头论足。” 我想了想，补充了一句，“并且，完全没有评论也是评论。”</p>
+<p>我突然发现我已经能掌握在这里说话的语言了，不像上次一样只会咕噜咕噜。</p>
+<p>“这全是你想写的，我只是推了你一把。小说家的好处就是，你不需要人评价。” 安托万冲我笑了笑，我觉得他眼角的皱纹比上次更多了。</p>
+<p>“嗯。” 虽然认同他所说的，但忐忑的心情一样没有减少。</p>
+<p>“你见过他了么？”</p>
+<p>“谁？”</p>
+<p>“想一想，你应该知道我说的是谁。”</p>
+<p>“那张脸？” 我的心跳开始加速，“我以为那是醉梦中的幻觉。”</p>
+<p>“现在同你说话的人，是幻觉么？幻觉讨论幻觉，很正常吧？” 安托万说。</p>
+<p>“嗯……我非常困惑。他是谁？”</p>
+<p>安托万冲我神秘地挤挤眼，卖了个关子没回答我，“接下来想干啥？”</p>
+<p>“困在一个地方这么久，想出去转转。” 之前有个小项目的回款下来了，有一笔小小的进账。我想到几个不错的小地方，开车过去，住个半个月，应该很舒服。</p>
+<p>“好主意啊！我也要出远门了，我预感有些麻烦会找上门来，你千万要小心。那人是个危险的家伙。”</p>
+<p>“诶！谁？” 我开始有点讨厌安托万那种神秘的语气了。</p>
+<p>“我们还会再见面的。” 他的眼神有一瞬间失去了光泽，但马上又恢复了回来，笑着起身走远了。</p>
+</div></body></html>
