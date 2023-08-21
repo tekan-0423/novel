@@ -1,0 +1,878 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>5</title><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #feffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f7f8f8;
+  border: 1px solid #e1e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e7e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #b9baba;
+}
+
+.markdown-body table tr {
+  background-color: #feffff;
+  border-top: 1px solid #b9baba;
+}
+
+.markdown-body table th {
+  background-color: #e7e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f7f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e1e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f7f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #8e9c92;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #bfc0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #bfc0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style> <style>body{max-width:808px; padding:24px;}</style></head><body><div id='markdown_content' class='markdown-body'><p>5.  En montagne</p>
+<p>Le lendemain matin, de bonne heure, je conduis ma Ford Focus dans les montagnes. Ces montagnes ont peut-être été célèbres il y a longtemps, mais tout le monde s'en fiche maintenant. La fille de l'auberge a dit qu'elle ne savait même pas que ces montagnes avaient encore un nom.</p>
+<p>&quot;Appelons-les simplement les Grandes Montagnes… Cela pose-t-il un problème ? Après tout, c'est la seule grande montagne ici.&quot;</p>
+<p>J'espère secrètement rencontrer ce &quot;maître accompli&quot; qui pourrait peut-être me guider dans ma vie future. Les échecs répétés dans mes tentatives entrepreneuriales, les ouvertures et les fermetures de mes entreprises, et mon roman qui n'a rien d'exceptionnel, tout cela m'a laissé seul, tandis que les gens autour de moi s'éloignent.</p>
+<p>Tous mes anciens amis, qu'ils soient mieux lotis que moi ou moins bien, avancent avec assurance dans leur vie, avec une famille et une carrière. Certains d'entre eux prospèrent avec leur entreprise, occupés à plein temps. D'autres profitent de la vie nocturne, entourés de partenaires changeants et semblant élégants. Je me sens seul et inactif, pas encore vraiment vieux, mais vivant une vie retirée, calme et modérée, comme un ancien retraité.</p>
+<p>Comment en suis-je arrivé là ? Ma vie va encore durer des décennies, que devrais-je faire ?</p>
+<p>Ma petite amie, oh non, ex-petite amie, que fait-elle ? Si elle était ici pendant ce voyage, cela rendrait certainement les choses plus intéressantes. Peut-être que si nous avions voyagé ensemble plus tôt, les choses n'auraient pas pris cette tournure. Mais qui sait vraiment, certaines personnes ne sont tout simplement pas destinées à être ensemble.</p>
+<p>Cela fait six mois depuis notre rupture, et nous n'avons eu aucun contact depuis que nous nous sommes séparés. Bien que je me sois habitué à être seul physiquement, ce vide dans mon cœur n'a pas été comblé. Elle a dit qu'elle voulait trouver un homme fiable pour se marier, avoir une famille, quelques enfants, une maison pas trop grande, mais suffisamment heureuse pour toute la famille.</p>
+<p>&quot;Pourquoi ne suis-je pas fiable ?&quot; Je grimace en pensant à cela, tourne le volant, et ma Ford Focus grimpe la pente le long du bord d'un étang. Au prochain virage, la voiture passe un pont de pierre, une petite cascade dégringolant d'un ruisseau de montagne. À chaque tournant, des rochers bizarres et des branches d'arbres denses exigent que je klaxonne légèrement pour signaler aux voitures en sens inverse.</p>
+<p>La jeune femme de l'auberge m'a averti qu'il y aurait de la pluie aujourd'hui, probablement de fortes pluies en montagne, mais pas pour longtemps. En regardant le ciel bleu et dégagé, je n'ai pas vraiment pris cela à cœur.</p>
+<p>Même si cet endroit est éloigné, la route est bien entretenue et belle. J'ai abaissé toutes les fenêtres de la voiture et j'ai continué à rouler en direction de la montagne. Le flanc gauche de la montagne est recouvert d'arbustes luxuriants, et sur la droite coule un petit ruisseau descendant de la montagne. Plus je monte, plus l'eau est claire, exposant les pierres blanches lisses du lit de la rivière et les herbes aquatiques serpentines. La Ford Focus avance rapidement, chantant sur la route, ralentissant légèrement lorsque d'autres voitures viennent en sens inverse ou lorsqu'un dépassement est nécessaire. À mesure que l'altitude augmente, les traces humaines deviennent de plus en plus rares.</p>
+<p>Après environ 40 minutes de route supplémentaires vers le haut, la rivière qui m'accompagnait sur la droite est devenue plus agitée, et le bruit de l'eau rugissante a couvert les chants d'oiseaux et les bruits d'insectes. L'humidité de l'air a augmenté avec la densité de la végétation. Après avoir tourné à un virage, une cascade dans un ravin est apparue, et les éclaboussures d'eau ont même atteint la voiture. La route, bien que mouillée, est pavée de bitume solide, donc je n'ai pas de quoi m'inquiéter. J'ai continué à rouler le long du chemin, et après un autre virage, la cascade a disparu derrière les montagnes, laissant un sentier bordé d'une forêt luxuriante de chaque côté.</p>
+<p>Enfin, la pluie annoncée par la jeune femme de l'auberge est arrivée. Les pluies en montagne sont toujours soudaines, et bien que j'aie fermé toutes les fenêtres en hâte, je me suis quand même retrouvé trempé sur la moitié de mon corps. La pluie est dense entre les nuages épais et les montagnes abruptes, semblable à deux titans qui se précipitent les uns sur les autres. Les gouttes de pluie tombant dans la forêt font un bruit comme des armes lourdes se heurtant sur un champ de bataille.</p>
+<p>Par précaution, je décide de ne pas continuer à conduire sous une pluie battante. Rebrousser chemin vers le bas de la montagne n'est pas une option non plus. J'ai garé la voiture au bord de la route, éteint le moteur et attendu que la pluie passe. J'avais de la nourriture et des boissons dans la voiture, donc je mangeais du pain et des saucisses pour passer le temps. La Ford Focus endurait la pluie et je me sentais comme un escargot caché sous un couvercle de yaourt. Ce n'était pas la première fois, ni la dernière, que ma Ford Focus me servait ainsi, et pour cela, je lui étais reconnaissant.</p>
+<p>J'ai jeté un coup d'œil à mon téléphone. Ne pas avoir de communication en cas d'urgence serait une situation désastreuse. Soudain, j'ai réalisé que cela faisait longtemps que je n'avais pas vu d'autres voitures passer. Mon téléphone affichait une seule barre de signal, heureusement. J'ai essayé d'envoyer un message à la fille de l'auberge pour la prévenir que je me trouvais actuellement en haut de la montagne pour échapper à la pluie. Je regrettais un peu de ne pas avoir suivi son conseil, mais je me sentais en sécurité dans la voiture pour le moment.</p>
+<p>Après avoir envoyé le message, j'ai attendu pendant environ une minute que le petit cercle de chargement sur l'écran s'arrête de tourner, indiquant que le message avait été envoyé avec succès.</p>
+<p>Puis, j'ai vu le message de la veille provenant de cet inconnu &quot;Lin&quot;. J'y avais réfléchi pendant un moment, mais je n'avais toujours pas décidé si je devais répondre ou comment le faire.</p>
+<p>Le contenu du message ne comportait que sept mots et un point d'exclamation : &quot;Tu dois trouver Antoine !&quot;</p>
+<p>Ces quatre mots étaient la seule phrase apparue dans la fenêtre de dialogue vide avec cette &quot;amie&quot; depuis je ne sais combien de temps.</p>
+<p>Toutes les informations sur cette &quot;amie&quot; inconnue :</p>
+<ul>
+<li>Elle a commenté sur mon nouveau statut, disant : &quot;Sais-tu quelles conséquences cela peut avoir d'écrire ça ???&quot;, ce qui signifie qu'elle pensait que mon roman pourrait causer des ennuis, mais quel genre d'ennuis ?</li>
+<li>Elle m'a envoyé ce message : &quot;Tu dois trouver Antoine !&quot;, prouvant qu'elle connaissait Antoine, mais n'était pas au courant de sa mort. Pourquoi devrais-je le chercher ?</li>
+</ul>
+<p>Si les informations fournies étaient exactes, elle était une femme appelée &quot;Lin&quot;, résidant à Paris, en France. Mais je n'ai jamais eu de communication avec elle.</p>
+<p>Tant de questions.</p>
+<p>J'ai hésité longtemps hier soir, sans supprimer le contact ni lui répondre. J'ai simplement pensé qu'il ne fallait pas me laisser entraîner par un inconnu, à chercher quelqu'un qui n'est plus de ce monde. De plus, je n'aimais pas du tout le ton de cette personne inconnue - pas de &quot;bonjour&quot;, pas de &quot;merci&quot;, seulement des reproches et des ordres.</p>
+<p>Cela n'a aucun sens. Si elle veut vraiment que je trouve Antoine, cela signifie qu'elle connaît Antoine, donc il n'y a aucune raison pour qu'elle ne sache pas qu'il est décédé. Si quelqu'un trouve amusant de jouer de mauvais tours avec ce genre de situation, cela serait vraiment dérangé.</p>
+<p>J'ai regardé la pluie à l'extérieur, qui ne montrait aucun signe d'affaiblissement. J'ai éteint le moteur, les essuie-glaces étaient à l'arrêt, l'intérieur de la voiture était plongé dans l'obscurité sans éclairage, les fenêtres étaient couvertes de pluie, et à part la lumière trouble qui passait à travers le rideau d'eau, rien n'était visible de l'extérieur. Il est possible que les inondations montagneuses soient déjà en cours, ou que des coulées de boue soient sur le point d'arriver, ou même que la terre et le ciel s'effondrent...</p>
+<p>J'ai pris mon téléphone, tremblant, et j'ai envoyé un message à &quot;Lin&quot; : &quot;Bonjour, est-ce que nous nous connaissons ?&quot;</p>
+<p>Mais quelque chose n'allait pas, vu que cette personne m'avait parlé de manière impolie, je me devais de faire de même. J'ai supprimé le message que j'avais écrit et l'ai remplacé par trois mots simples.</p>
+<p>&quot;Qui êtes-vous ?&quot; Je l'ai écrit, envoyé.</p>
+<p>Le message n'a pas été envoyé, la dernière barre de signal a disparu.</p>
+<p>Avec beaucoup de frustration, j'ai jeté le téléphone de côté. C'était comme si nous étions dans un combat de boxe, où j'avais reçu deux coups de poing soudains et inexplicables de l'autre côté. Lorsque j'ai finalement compris ce qui se passait, je me suis préparé à riposter, mais on m'a expulsé du ring.</p>
+<p>Peu importe, autant prendre les choses comme elles viennent. Je suis venu ici pour me changer les idées, pas pour m'énerver. J'ai incliné mon siège en arrière dans la voiture, posé mes pieds sur le volant et fermé les yeux pour me détendre. La pluie d'aujourd'hui ne durera pas longtemps, j'ai confiance en la météo annoncée par la fille de l'auberge.</p>
+<p>La pluie à l'extérieur continue de tomber sans fin…</p>
+<p>————————-</p>
+<p>Lorsque je me suis réveillé de ma courte sieste, la pluie avait complètement cessé. J'ai regardé attentivement vers le haut et j'ai vu que la route divisait la forêt en deux côtés, laissant entrevoir un ciel bleu. Les nuages blancs flottaient toujours dans le ciel, mais ils semblaient si paisibles, reposant proprement au-dessus de nos têtes à portée de main, très différents des nuages sombres et agressifs de la pluie. Le soleil devait être timide, caché quelque part derrière un nuage moelleux.</p>
+<p>J'ai ouvert la porte de la voiture, me suis étiré en baillant et ai secoué mes jambes. L'air riche en oxygène stocké dans la végétation verdoyante de la montagne m'a redonné de l'énergie. Mon téléphone a retrouvé une barre de signal, la jeune femme de l'auberge m'a répondu, me conseillant d'attendre patiemment que la pluie s'arrête avant de reprendre la route en montagne. Je l'ai appelée pour lui faire part de ma sécurité et, si possible, j'ai exprimé mon désir de dîner avec des plats maison à l'auberge ce soir. Elle s'est proposée pour tout organiser.</p>
+<p>J'ai renvoyé le message à &quot;Lin&quot; : &quot;Qui êtes-vous ?&quot; Ces trois mots avec un ton de mécontentement ont été affichés dans la fenêtre de dialogue. Aucune réponse n'est venue, et j'ai ressenti une sorte de satisfaction après avoir remporté cette &quot;dispute silencieuse&quot;. J'ai rangé mon téléphone avec contentement.</p>
+<p>Je suis remonté dans la voiture et j'ai voulu continuer ma route. Jusqu'à présent, j'avais roulé pendant près de deux heures en direction de l'intérieur des montagnes. Il semblait que la pluie ne reviendrait plus, cette route était la seule et il n'y avait pas de bifurcation, donc je ne risquais pas de me perdre. Mon téléphone avait été en charge dans la voiture, le réservoir d'essence était encore bien rempli et j'étais rafraîchi après ma courte sieste.</p>
+<p>Je pensais que je finirais par rencontrer cet expert en tofu.</p>
+<p>Cependant, le destin avait une autre idée en tête. Ma Ford Focus avait des ennuis.</p>
+<p>Pendant toutes ces années, ma fidèle Ford Focus m'avait accompagné sans faillir, jamais elle ne m'avait laissé tomber, jamais elle n'était restée immobile. Et maintenant, au milieu de cette forêt, ma voiture avait tout simplement décidé de ne pas démarrer. J'ai essayé de démarrer le moteur plusieurs fois, mais il ne s'est rien passé, aucun signe de vie.</p>
+<p>Comme je l'avais vu à la télévision, je me suis tenu devant la voiture, ouvrant le capot du moteur. J'ai imaginé que je verrais deux fils électriques suspendus dans les airs, et si je parvenais à les relier, la voiture reviendrait miraculeusement à la vie. C'était la seule chose que je pouvais faire pour réparer la voiture.</p>
+<p>Mais ce n'était pas le cas. Le moteur sous le capot était mort, aussi inanimé qu'une vieille chaussure sortie de l'eau, sans vie et impuissant.</p>
+<p>Ma Ford Focus était là, sans vie sur le bord de la route, ne répondant plus à mes tentatives de démarrage. J'ai décidé de mettre les vivres que j'avais dans la voiture dans mon sac à dos, j'ai verrouillé la voiture et j'ai continué à marcher vers le haut de la montagne. J'ai tenté de me rassurer en me disant que la situation n'avait pas beaucoup changé. Mon téléphone avait toujours de la batterie, j'étais en bonne forme physique et j'avais suffisamment de provisions.</p>
+<p>La route en asphalte sous mes pieds avait été lavée par la pluie, et sous le soleil, elle ressemblait à un jean propre qui séchait après avoir été lavé. Les grands sapins et les cyprès sur les côtés de la route semblaient fiers de leur victoire contre la pluie battante. Le bruit de la cascade que j'avais croisée plus tôt résonnait encore plus fort maintenant, et j'ai continué à avancer rapidement vers l'intérieur des montagnes.</p>
+<p>En traversant la forêt, j'ai retrouvé le ruisseau que j'avais vu auparavant. Après une demi-heure de marche, la route asphaltée s'est terminée sous mes pieds, et j'ai soudain réalisé que le ruisseau avait déjà disparu. Devant moi s'étendait une petite zone de terre plate recouverte de graviers, et au-delà, il y avait un escalier en pierre qui montait vers la montagne. Au coin où l'escalier en pierre rencontrait la zone de graviers, un homme vêtu en moine semblait en train de faire ses prières avec un chapelet. On ne pouvait pas vraiment deviner son âge, mais il avait l'air un peu plus jeune que moi, son visage était plus délicat, certainement bien préservé par l'environnement naturel.</p>
+<p>Il avait un panier de perles en bois à ses pieds, une bobine de fil, et était assis sur un petit tabouret. Ses jambes étaient écartées, et il était en train de passer lentement les perles une à une sur le fil, travaillant sans hâte, donnant même l'impression d'une certaine nonchalance.</p>
+<p>Je me suis un peu excité, car je savais que nous étions probablement proches de notre destination, mais je ne savais pas comment aborder la situation. Je suis resté là à l'observer un moment, mais il n'a pas relevé la tête, n'a pas été surpris de la présence d'un étranger, comme s'il ne me voyait pas du tout.</p>
+<p>Après quelques instants d'observation, je me suis finalement accroupi près de lui et j'ai tiré un fil, imitant sa méthode pour enfiler les perles de bois.</p>
+<p>&quot;108 perles&quot;, dit-il sans même me regarder.</p>
+<p>&quot;D'accord&quot;, répondis-je.</p>
+<p>Ce n'était pas si difficile, et il n'avait pas encore fini son chapelet alors que je commençais déjà le mien. Il n'y avait pas de &quot;bonjour&quot; ni de &quot;merci&quot;, mais plutôt un silence paisible pendant que nous enfilions nos perles. Je ne savais pas combien de temps cela a duré, mais à un moment donné, mes jambes ont commencé à me faire mal à force de rester accroupi. J'ai donc pris mon sac à dos et je me suis assis sur le sol à côté de lui.</p>
+<p>Le panier de perles en bois s'est vidé rapidement. J'ai compté mes perles pour la dernière fois, et j'en avais 75, donc il ne devait pas y avoir 108 non plus dans le sien. Il restait une dizaine de perles dans son panier. Il en a pris une poignée et m'en a laissé six.</p>
+<p>&quot;81 suffiront.&quot;</p>
+<p>&quot;D'accord&quot;, dis-je. Mais je me demandais comment il avait pu déterminer combien de perles j'avais dans ma main.</p>
+<p>&quot;Tu es ici en voyage?&quot;</p>
+<p>&quot;Oui, je suis venu pour me détendre un peu.&quot;</p>
+<p>&quot;Viens, je vais te faire visiter.&quot; Il a pris le panier de perles dans ses mains, les perles que nous avions enfilées précédemment étaient toujours dedans.</p>
+<p>&quot;Comment dois-je t'appeler?&quot;</p>
+<p>&quot;Appelle-moi simplement moine.”</p>
+<p>J'ai hoché la tête et l'ai suivi avec mon sac à dos.</p>
+<p>Nous avons marché en file le long de l'escalier en pierre vers le sommet de la montagne. Les paysages étaient magnifiques ici, très différents de ce que j'avais vu sur le petit chemin précédent. En me retournant vers l'escalier en pierre, j'ai pu voir les sommets des montagnes s'étendre à perte de vue. Les montagnes n'étaient pas abruptes ici, et les sommets couverts d'arbres donnaient une impression de calme. Les rivières et les nappes de brume coulaient entre les vallées, et au loin, au milieu de la nature, se trouvaient les villages, les rizières et les lacs, puis plus loin encore, à l'horizon, il n'y avait ni montagnes ni rivières, ni terres agricoles, ni villes... seulement le ciel et la terre.</p>
+<p>Le soleil couchant était le seul être vivant entre le ciel et la terre.</p>
+<p>Le moine marchait vite, et moi, je marchais plus lentement. Après environ 20 minutes de montée, mes jambes commençaient à trembler. Finalement, au bout de l'escalier en pierre, j'ai aperçu un modeste temple. Le temple surplombait les montagnes, avec une vaste crête derrière lui. Je ne connaissais pas grand-chose au feng shui, mais même moi, je pouvais dire que cet endroit avait une énergie particulière. Cependant, le temple était vraiment simple, sans même une pancarte. J'aurais imaginé qu'il y aurait au moins une plaque portant le nom &quot;Temple de la Pureté Suprême&quot; accrochée à la porte d'entrée, mais après avoir cherché un moment, il n'y avait rien.</p>
+<p>Le moine m'a emmené à l'intérieur d'une pièce très rudimentaire, qui semblait être la cuisine. Il a posé ce qu'il tenait dans les mains, puis il est sorti pour couper du bois devant la porte. Après avoir manié la hache quelques fois, il est revenu à la cuisinière et a commencé à cuisiner. À l'entrée de la cuisine se trouvait un grand seau d'eau, un pot contenant du riz était à côté de la cuisinière, et une corde descendait du plafond près de la fenêtre, avec un petit panier de bambou accroché au bout, enveloppé d'une toile de jute, contenant du tofu.</p>
+<p>Ha ! Du tofu !</p>
+<p>Je l'ai observé s'affairer, aller et venir, se lever et s'accroupir. Je ne savais vraiment pas comment l'aider ni quoi dire. Je me suis contenté de le suivre, entrant et sortant avec lui, jusqu'à ce que finalement je me tienne simplement à l'écart, observant curieusement tout autour de moi. Il n'a pas dit un mot, se concentrant sur son travail.</p>
+<p>Après un moment à s'occuper de tout cela, les plats cuisinaient dans la casserole, le moine s'est essuyé les mains sur un torchon et m'a dit que le repas serait bientôt prêt. Nous mangerions ensemble, puis je passerais la nuit dans la chambre d'hôte et il me ramènerait en bas de la montagne demain.</p>
+<p>Bien sûr, cela ne posait pas de problème, mais je me souvenais d'avoir dit à la jeune femme de l'auberge que je dînerais avec elle ce soir. Si je ne rentre pas, elle pourrait s'inquiéter. Je devais lui faire savoir.</p>
+<p>&quot;Je vais devoir appeler en bas de la montagne&quot;, dis-je.</p>
+<p>&quot;C'est normal.&quot;</p>
+<p>&quot;Mon téléphone n'a pas de signal&quot;, dis-je en soupirant, la dernière barre de signal avait disparu.</p>
+<p>&quot;Je vais jeter un coup d'œil&quot;, dis-je en tendant le téléphone au moine.</p>
+<p>Il l'a examiné, a tapoté l'arrière du téléphone avec son index et a émis un son fort. Après avoir regardé, il me l'a rendu. &quot;C'est bon.&quot;</p>
+<p>Eh bien, c'était vrai. La dernière barre de signal était de retour dans le coin supérieur droit de l'écran de mon téléphone. J'ai rapidement appelé en bas de la montagne : tout allait bien, je serais de retour demain et je n'aurais pas besoin de laisser le dîner pour moi. La jeune femme à l'autre bout de la ligne a soupiré de soulagement, elle semblait vraiment s'inquiéter que quelque chose me soit arrivé.</p>
+<p>Peu de temps après avoir raccroché, le repas était prêt. Le moine m'a guidé jusqu'à la chambre d'hôte. C'était la plus grande des chambres du patio arrière, avec une grande table carrée au milieu. Il y avait deux autres moines là-dedans, qui venaient de finir leur repas et étaient en train de débarrasser la table. En nous voyant entrer avec nos bols et nos assiettes, ils se sont inclinés devant le moine.</p>
+<p>&quot;Vénérable Maître&quot;, dirent-ils en chœur.</p>
+<p>J'ai failli m'étouffer.</p>
+</div></body></html>
