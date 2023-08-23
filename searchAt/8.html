@@ -1,0 +1,864 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>8</title><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #2d2d2d;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#999999;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #66cccc;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #f99157;
+}
+.markdown-body em{
+  color: #ffcc66;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #99cc99;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#99cc99;stroke: #99cc99;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #999999;
+  vertical-align: middle;
+  background-color: #333333;
+  border: 1px solid #494949;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #494949;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #9b9b9b;
+  border-left: .25em solid #f2777a;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #434343;
+  color: #66cccc;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #66cccc;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #66cccc;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #66cccc;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #66cccc;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #66cccc;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #717171;
+}
+
+.markdown-body table tr {
+  background-color: #2d2d2d;
+  border-top: 1px solid #717171;
+}
+
+.markdown-body table th {
+  background-color: #434343;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #323232;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #333333;
+  color: #999999;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #999999;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #494949;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #333333;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #48be66;
+}
+
+.token.punctuation {
+    color: #8b86c9;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #8b86c9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #e6424b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #c33795;
+}
+
+.token.function,
+.token.class-name {
+    color: #67878e;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d38e63;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #6b6b6b;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #6b6b6b;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style> <style>body{max-width:808px; padding:24px;}</style></head><body><div id='markdown_content' class='markdown-body'><h2><a id="8-grand-loft-sur-la-mer" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Grand loft sur la mer</h2>
+<p>La voiture de luxe a roulé pendant près de deux heures d'affilée avant de quitter la route et de tourner à droite dans une grande porte. Au loin, j'ai aperçu un bâtiment en forme de tour brillant dans le ciel nocturne élevé, agitant quelques piliers de lumière minces vers le ciel. Deux grands &quot;entrepôts&quot; étaient situés à l'extrémité de la route en asphalte.</p>
+<p>Si je ne me trompe pas, cette tour doit être une tour de contrôle, et ces entrepôts sont probablement des hangars. Nous sommes dans un petit aéroport.</p>
+<p>La voiture a doucement roulé le long du chemin et s'est finalement arrêtée dans un entrepôt, mettant fin à notre long trajet nocturne. Abou est sorti en premier de la voiture et a ouvert la porte pour moi. J'ai attrapé mon téléphone et mon sac à dos, puis sauté hors de la voiture. Mon téléphone indiquait qu'il était déjà passé 23 heures.</p>
+<p>Devant nous se trouvait un avion d'affaires, dont je ne connaissais pas le modèle, mais sa taille imposante et son apparence technologique prouvaient la puissance de cette &quot;société&quot; dont parlait Abou. La carrosserie profilée de l'avion brillait d'une lueur froide sous les lumières du hangar. Les préparatifs nécessaires avaient déjà été effectués par le personnel au sol, et ils se préparaient à partir en conduisant des véhicules d'entretien. Les feux de signalisation à l'extérieur de l'avion clignotaient et l'intérieur du cockpit était occupé, indiquant que ce rapace recouvert de tôle était prêt à décoller à tout moment.</p>
+<p>Abou m'a guidé jusqu'à l'escalier de l'avion et nous sommes montés à bord. À l'intérieur, une senteur d'hôtel étoilé m'a accueilli. Les canapés en cuir étaient durs, la moquette était douce. J'aurais aimé montrer un peu de mécontentement, mais en cherchant bien, il n'y avait rien à critiquer. Une hôtesse de l'air nous a versé nos boissons respectives, puis elle a rapidement disparu derrière un rideau en tissu. J'ai choisi un grand verre de whisky, tandis qu'Abou a opté pour une grande bouteille d'eau pétillante.</p>
+<p>Le cadre massif d'Abou semblait mal à l'aise dans le petit canapé de l'avion, il ne savait pas trop quoi dire et se contentait de frotter les accoudoirs du canapé de ses mains.</p>
+<p>&quot;À la vôtre !&quot; dit-il en levant son verre d'eau, esquissant son sourire caractéristique.</p>
+<p>&quot;On ne peut vraiment pas en parler ?&quot;</p>
+<p>&quot;Je n'ai pas le droit d'en parler.&quot; Abou s'est mordu la lèvre.</p>
+<p>&quot;S'il n'y a vraiment rien à dire, autant ne rien dire du tout.&quot; Je savais qu'Abou ne me dirait rien, peu importe ce que je lui demandais. Autant arrêter de lui poser des questions. En entendant cela, Abou a semblé soulagé de ne plus avoir à engager de conversation gênante.</p>
+<p>J'ai bu la majeure partie de mon whisky en une gorgée, et avec l'aide de l'alcool, je me suis enfoncé dans le canapé en prévision de dormir. Une couverture douce était sous moi, et je l'ai tirée pour m'enrouler confortablement.</p>
+<p>L'avion a commencé à bouger doucement alors qu'il sortait du hangar. Les poussées légères nous ont fait tourner quelques virages à angle droit, puis nous nous sommes arrêtés. Cela signifiait que nous étions sur la piste de décollage, prêts à décoller. Derrière le rideau, j'entendais le pilote parler brièvement avec l'hôtesse de l'air à travers la radio. À peine la conversation terminée, j'ai entendu le bruit des turbines des moteurs à l'arrière de l'avion, et la fréquence des vibrations dans l'air accélérant mon rythme cardiaque. Les yeux fermés, j'attendais que l'alcool fasse effet.</p>
+<p>Quand les puissantes poussées horizontales des moteurs de l'avion et l'accélération causée par la gravité ont propulsé le sang vers mon cerveau, les effets de l'alcool se sont également fait sentir. L'avion a effectué une courbe en l'air, et tous mes sens se sont intensifiés, chaque partie de mon corps s'opposant à l'accélération. Ainsi, j'ai pu distinguer chaque attitude de l'avion dans les airs avec une grande clarté. Quand l'avion a pris son cap après avoir atteint l'altitude de croisière, passant de l'angle d'ascension à l'horizontal, je me suis finalement endormi à ce moment-là.</p>
+<hr />
+<p>Je me suis réveillé lorsque l'avion a entamé sa descente, et il faisait déjà jour. J'ai soulevé le pare-soleil pour regarder par la fenêtre. Les nuages blancs m'aveuglaient sous la lumière du soleil.</p>
+<p>Une nouvelle descente, l'avion a plongé dans un immense nuage de coton sous moi, et la vue par la fenêtre a été engloutie par la blancheur. Après quelques minutes, l'avion est ressorti du nuage pour révéler un monde en dessous. À travers le hublot, j'ai enfin pu voir le paysage extérieur.</p>
+<p>C'était une mer bleue et calme, le soleil se cachait silencieusement dans un coin du ciel d'un bleu pâle. L'accélération nous a fait suivre une courbe en l'air, et pendant que l'avion s'inclinait sur le côté, j'ai pu apercevoir la silhouette d'une petite île de la taille d'une paume sous nous. Quinze minutes plus tard, l'avion a atterri sur la piste de cette petite île. La piste était une route étroite et longue s'étendant jusqu'à la mer, avec l'eau agitée à quelques mètres de part et d'autre. Guidé par la tour de contrôle, l'avion s'est arrêté à l'extrémité du terminal de l'aéroport.</p>
+<p>Abou m'a souri en descendant de l'avion. L'île sous mes pieds était baignée dans la lumière du matin, les cris des mouettes portés par la brise marine, et derrière l'aéroport s'élevait une montagne de taille moyenne qui s'étendait jusqu'au bout de l'île.</p>
+<p>J'ai consulté mon téléphone, il était déjà 5 heures et demie du matin. Ensuite, j'ai ouvert la carte sur mon téléphone pour voir où j'étais, mais je n'avais pas de signal. Une fenêtre contextuelle affichait &quot;Pas de service&quot;, et ma batterie était presque à plat. J'ai soupiré et appuyé sur le bouton &quot;OK&quot;, éteignant mon téléphone.</p>
+<p>Abou a pris le volant cette fois-ci. Il a démarré une vieille voiture décapotable dans le parking avec une clé et j'ai rejoint en tant que passager. Cette voiture était une Ford Mustang jaune d'or, un symbole de l'ère industrielle américaine. Le contraste entre cette voiture de muscle et cette petite île était assez étrange. Si cette voiture avait des pensées, je me demandais si elle se sentirait emprisonnée sur cette petite île.</p>
+<p>&quot;Une Ford Mustang de 1969, il n'en reste que six dans le monde avec cette finition. J'ai passé un an à la restaurer pour qu'elle retrouve son aspect d'origine. Écoutez ce bruit !&quot; Abou a expliqué avant de passer en vitesse et de presser l'embrayage et l'accélérateur, faisant rugir la Ford Mustang dans un cri rauque.</p>
+<p>&quot;Oui, Oui, ne la mettez pas dans l'eau, les décapotables ne sont pas étanches.&quot; J'ai dit anxieusement, agrippant ma ceinture de sécurité.</p>
+<p>&quot;Haha, ne vous inquiétez pas !&quot; Il a éclaté de rire, montrant un grand sourire rempli de dents blanches. Nous avons roulé à vive allure le long de la route côtière en montée, Abou maîtrisant parfaitement la route, passant habilement entre freinage et accélération, et la Ford Mustang courait avec agilité sur la route en asphalte qui serpentait à flanc de montagne. Le vent marin me rendait les yeux larmoyants, et la sensation de la vitesse me faisait avoir des frissons dans l'estomac.</p>
+<p>Une nuit de voyage m'avait laissé épuisé, je n'avais pas dormi confortablement, ni pris un petit-déjeuner ou me suis préparé. Tout cela était pour rencontrer ce &quot;président&quot; d'une société dont je ne connaissais rien.</p>
+<p>Ce voyage en voiture était beaucoup plus relaxant. La Ford Mustang a franchi le dernier virage, est entrée dans un tunnel, et en est ressortie pour révéler une grande surface de bord de mer devant nous. Je savais que cela s'appelait un &quot;grand loft&quot; d'après un magazine de design intérieur: &quot;Comparés aux villas conventionnelles, les grands loft intégrant harmonieusement architecture et environnement occupent des sites exceptionnels, offrant de vastes balcons, des piscines en plein air et un luxe incomparable qui englobe tout.&quot;</p>
+<p>C'était une crique encastrée dans les montagnes, avec des eaux relativement calmes. En dessous du grand loft se trouvait une petite plage, et un petit yacht était amarré dans le port. Si vous vouliez être tranquille, c'était un endroit parfait.</p>
+<p>Quel genre de magnat vivait ici ? Quel genre de président de société donnait des ordres d'ici ? Je ne pouvais pas m'empêcher de me demander.</p>
+<p>Abou a garé la voiture dans le parking et m'a emmené à l'étage par l'ascenseur. Les portes se sont ouvertes sur un hall spacieux, avec une grande baie vitrée offrant une vue panoramique sur la crique. Le soleil incliné pénétrait, projetant des jeux d'ombre et de lumière jusqu'à mon pied, où j'ai rejoint Abou sur le canapé.</p>
+<p>&quot;Ah ha ! Nous y sommes enfin !&quot; Abou m'a dit joyeusement.</p>
+<p>Soudain, une porte s'est ouverte à l'extrémité du hall, et une jeune femme asiatique en est sortie, d'une trentaine d'années environ. Elle portait une blouse argentée très professionnelle qui laissait ses bras découverts, un pantalon long noir et des talons hauts noirs. Bien qu'elle ne fasse aucun effort pour mettre en valeur sa silhouette, je ne pouvais m'empêcher de remarquer les courbes de son corps.</p>
+<p>La jeune femme s'approcha et s'arrêta devant nous. Ses cheveux étaient attachés en une queue de cheval, et le reflet du soleil sur son visage était pur et clair, sans la moindre retouche. J'ai eu une seconde pour admirer sa beauté, une image construite avec seulement deux courbes simples. L'une allait du menton à l'oreille, éclairée par le soleil, et l'autre allait du front au nez et aux lèvres, créant une ombre délicate. Ces deux courbes se croisaient en son centre, créant une harmonie entre le noir et le blanc.</p>
+<p>Comme des gouttes de pluie tombant dans une mare, créant des ondulations douces et naturelles, ou comme une sculpture en marbre, froide et rigoureuse, ou encore comme une danse flamenco espagnole, passionnée, ou comme les cordes d'un violoncelle, mélancoliques, ou comme un coucher de soleil, à la fois vibrant et vrai, ou encore comme des nuages blancs, doux et changeants.</p>
+<p>Le soleil sur la mer semblait s'embraser, tout le scintillement a été absorbé dans un éclat éblouissant, et à ce moment-là, le temps semblait éternel. L'éclat de ce moment et le temps éternel semblaient être condensés dans cette image d'une seconde. C'était le profil le plus magnifique que j'avais jamais vu, ou peut-être même la scène la plus magnifique que j'avais jamais vu.</p>
+<p>Après une seconde, la lumière s'est atténuée, l'air s'est condensé en gouttes d'eau, les battements de cœur ont perdu leur signification, et l'océan est tombé dans l'abîme.</p>
+<p>Elle m'a jeté un coup d'œil, m'arrachant presque le souffle avec sa froideur.</p>
+<p>&quot;Il est là.&quot; Elle a dit à Abou, puis elle s'est retournée et est partie sans dire un mot de plus.</p>
+<p>La porte s'est fermée derrière elle, emportant avec elle la moitié de la lumière et du soleil de la pièce, et avec son départ, quelque chose en moi est mort.</p>
+<p>&quot;Elle est belle, n'est-ce pas ?&quot; Abou s'est tourné vers moi, et j'ai hoché la tête vigoureusement.</p>
+<p>&quot;Allons-y, allons rencontrer le président.&quot; Abou s'est levé du canapé.</p>
+<p>Il m'a conduit vers une porte dans un coin du hall. La porte n'était pas étiquetée avec le nom du &quot;président&quot;. Je croyais de plus en plus que c'était une pièce pour le rangement et les fournitures de nettoyage.</p>
+<p>L'expression d'Abou est devenue sérieuse, il a frappé la porte légèrement, a tourné la poignée et a ouvert la porte en coin. Il a ensuite jeté un coup d'œil à l'intérieur, hoché la tête et m'a fait signe d'entrer. J'ai regardé à l'intérieur par l'ouverture de la porte, la pièce était mal éclairée, et une peur que je ne pouvais pas expliquer m'a envahi.</p>
+<p>Abou a tapoté mon épaule et m'a fait un signe OK. J'ai soupiré profondément et me suis dirigé vers la pièce. Abou a doucement refermé la porte derrière moi.</p>
+<p>La pièce était un monde à part par rapport au hall extérieur, un monde qui était mort comparé au monde vivant à l'extérieur. Lorsque la porte s'est ouverte, j'ai été frappé par une odeur, une odeur de mort. L'endroit semblait être éclairé et sombre à la fois, suffisamment sombre pour donner envie de s'endormir, mais assez lumineux pour tout voir clairement. Au centre de la pièce se trouvait un lit, avec un homme allongé dessus, un homme malade.</p>
+<p>Je m'approchai du lit, le visage de cet homme français était familier au-delà de la familiarité, mais en même temps, il semblait étrangement étranger. Il me regarda et soupira, et je fis de même.</p>
+<p>Allongé sur le lit était C. Oui, bien sûr. La dernière fois qu'il m'avait appelé pour me donner la nouvelle du décès d'Antoine, c'était lui qui avait pris la parole en mon nom aux funérailles d'Antoine. Quand cela s'était-il produit ? Il y a sept ou huit mois, n'est-ce pas ? En si peu de temps, tant de choses avaient changé.</p>
+<p>Les trois partenaires et amis d'autrefois, C, Antoine et moi. L'un était décédé, l'autre gisait dans un lit d'hôpital, et moi, je me tenais à côté de C, ressentant un profond sentiment de culpabilité inexplicable.</p>
+<p>&quot;Comment cela en est-il arrivé là ?&quot; dis-je d'un ton de reproche.</p>
+<p>&quot;Hey~ Ça fait tellement longtemps, te voir me rend vraiment heureux.&quot; C sourit joyeusement, il était toujours allongé là, ne faisant aucun effort pour s'asseoir, ne bougeant pas du tout, sa partie inférieure était complètement immobile.</p>
+<p>&quot;Si tu voulais me voir, il suffisait de me le dire, pourquoi t'embêter autant !&quot; J'avais accumulé de la rancune tout au long de mon trajet, et elle devait maintenant se libérer. Après avoir dit cela, je ne pouvais plus me résoudre à me plaindre davantage. &quot;Raconte-moi calmement ce qui s'est passé. Je suis ici, je ne vais nulle part.&quot;</p>
+<p>&quot;Tu n'as pas pris de petit-déjeuner, n'est-ce pas ? Tu dois être fatigué d'avoir fait le voyage. Dois-je demander à Lin de te préparer quelque chose ?&quot;</p>
+<p>&quot;Lin ?&quot; Je demandai, surpris, puis me rendis compte rapidement que cela n'était pas approprié, je ne continuai donc pas à poser de questions sur ce nom.</p>
+<p>&quot;Du café, des œufs et du jambon grillé, je me souviens que tu apprécies le petit-déjeuner à l'anglaise.&quot; C était toujours la personne la plus attentive à ces détails.</p>
+<p>Il tourna la tête et appuya son menton sur un appareil près de son oreiller, puis parla dans un interphone : &quot;Veuillez apporter le petit-déjeuner, merci.&quot;</p>
+<p>&quot;Attendez un instant, nous arrivons immédiatement.&quot; Une voix répondit de l'autre côté de l'interphone. C tourna lentement la tête vers moi.</p>
+<p>&quot;Je n'ai plus beaucoup de temps, je vais essayer de te raconter tant que mon esprit est encore clair, tu dois écouter attentivement.&quot;</p>
+<p>&quot;Si c'est une farce, je ne te laisserai pas t'en sortir à si bon compte.&quot; Je traînai le petit canapé à côté et m'assis, prêt à écouter attentivement.</p>
+<p>&quot;Il y a environ cinq ans, tu as quitté Paris pour retourner en Chine. Depuis lors, il s'est passé beaucoup de choses. Tu sais, notre entreprise à nous trois, c'est moi qui ai fait les démarches pour la dissoudre.&quot;</p>
+<p>Je fis signe que je comprenais.</p>
+<p>&quot;En réalité, l'entreprise n'a jamais été dissoute. Après que toi et Antoine ayez quitté, j'ai finalement décidé de la conserver. En quelques années seulement, j'ai fait grandir cette entreprise de manière assez significative. Je ne sais pas si tu peux comprendre, mais c'était vraiment énorme, d'une énorme ampleur. C'est difficile à expliquer comment j'ai fait, en gros, je voulais quelque chose et je l'obtenais. Les actifs de l'entreprise ont été multipliés, chaque activité était rentable, que ce soit la finance, l'internet, les médias, les ressources minières, et ainsi de suite.&quot;</p>
+<p>&quot;Félicitations !&quot; dis-je, à la fois en colère et envieux. L'entreprise que nous avions créée ensemble avait prospéré après mon départ, tandis que de mon côté, j'avais enduré des revers et les coups de la société. Que ce soit en termes de compétences ou d'opportunités, j'avais été vaincu, le destin ne m'accordant aucune faveur.</p>
+<p>&quot;Ne sois pas jaloux, tout a un prix. Plus tu obtiens, plus le prix à payer est élevé. Je dois garder un secret, ce secret est connu de moi seul et d'Antoine. Pour être précis, il me l'a confié. Maintenant, je dois te le révéler, sinon je ne vais pas tarder à mourir, et tu suivras Antoine et moi.&quot;</p>
+<p>&quot;Tu veux dire que nous allons mourir ? Impossible, je suis en bonne santé.&quot; Je me levai instinctivement du canapé, la peur montant en moi, mes genoux commençant à trembler légèrement. Après avoir réalisé que je perdais mon calme, je m'empressai de me rasseoir sur le canapé.</p>
+<p>&quot;Ouvre ma couverture, et regarde-moi.&quot; C ferma les yeux.</p>
+<p>Je ne pouvais pas refuser. Je ne pouvais vraiment pas comprendre comment C en était arrivé à cet état. Qu'est-ce qui était arrivé à son corps ? J'ouvris la couverture, cherchant des réponses.</p>
+<p>Ce que je vis me glaça le sang.</p>
+<p>Sous la couverture se trouvait ce qui ressemblait au corps sans vie d'une personne, sa moitié inférieure s'était desséchée et réduite à une fraction de ce que j'avais en mémoire. Ses doigts sortaient des manches de son pyjama tels des branches noires et desséchées, et ses pieds, visibles à travers le bas du pyjama, ressemblaient à des feuilles d'automne d'un jaune cireux. De la poitrine vers le haut, il semblait vivant, mais de la poitrine vers le bas, il était mort depuis longtemps.</p>
+</div></body></html>
