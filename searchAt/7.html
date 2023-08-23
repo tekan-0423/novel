@@ -1,0 +1,872 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>7</title><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #2d2d2d;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#999999;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #66cccc;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #f99157;
+}
+.markdown-body em{
+  color: #ffcc66;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #99cc99;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#99cc99;stroke: #99cc99;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #999999;
+  vertical-align: middle;
+  background-color: #333333;
+  border: 1px solid #494949;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #494949;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #9b9b9b;
+  border-left: .25em solid #f2777a;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #434343;
+  color: #66cccc;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #66cccc;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #66cccc;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #66cccc;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #66cccc;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #66cccc;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #717171;
+}
+
+.markdown-body table tr {
+  background-color: #2d2d2d;
+  border-top: 1px solid #717171;
+}
+
+.markdown-body table th {
+  background-color: #434343;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #323232;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #333333;
+  color: #999999;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #999999;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #494949;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #333333;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #48be66;
+}
+
+.token.punctuation {
+    color: #8b86c9;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #8b86c9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #e6424b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #c33795;
+}
+
+.token.function,
+.token.class-name {
+    color: #67878e;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d38e63;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #6b6b6b;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #6b6b6b;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style> <style>body{max-width:808px; padding:24px;}</style></head><body><div id='markdown_content' class='markdown-body'><h2><a id="7-visiteur-inattendu" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Visiteur Inattendu</h2>
+<p>&quot;J'ai réfléchi toute la nuit dernière et tout ce qui pourrait vous aider, c'est ça. Ce que vous avez vu par vous-même, si c'est vrai ou faux, comment gérer tout cela, c'est à vous de décider.&quot; En descendant de la montagne, le moine maître de temple m'a dit dans la voiture.</p>
+<p>Il était accompagné d'un autre moine et nous sommes descendus ensemble de la montagne en voiture pour récupérer ma Ford que j'avais laissée au bord de la route hier. À trois, nous avons démarré la voiture. Apparemment, c'était un problème de batterie. J'avais probablement épuisé la batterie en laissant les phares allumés, donc elle ne démarrait pas. Les moines ont connecté deux fils du pick-up à la batterie de ma Ford, allumé le moteur, et la Ford a émis un soupir de soulagement. Le problème était résolu.</p>
+<p>Avant de partir, j'ai demandé au moine maître de temple quel était son nom de temple. Ce n'était pas pratique de toujours l'appeler &quot;le moine&quot;.</p>
+<p>&quot;Nous en sommes là avec le karma entre nous, mon nom n'a plus vraiment d'importance pour vous. Oh! au fait, j'ai déjà passé commande de votre livre, mais il faudra plus de deux mois avant qu'il arrive. La livraison est toujours un problème ici.&quot;</p>
+<hr />
+<p>De retour à l'hôtel, il était déjà l'après-midi. La fille de l'hôtel et la propriétaire m'ont chaleureusement accueilli comme si j'étais parti depuis longtemps. La propriétaire m'a dit de manger un bon repas avec elles ce soir, puisque je n'avais pas mangé ce qu'elle a préparé hier. Je n'avais pas à m'inquiéter de l'argent, elle invitait.</p>
+<p>J'ai accepté avec joie. Revenir du monde des esprits à la vie ordinaire signifiait être plus terre à terre.</p>
+<p>Elles m'ont interrogé sur ce que j'avais vu en haut de la montagne. J'ai choisi quelques détails à raconter et elles semblaient curieuses. Rare sont ceux qui ont rencontré des sages et encore moins qui ont passé la nuit dans le temple en haut. Je leur ai dit qu'il y avait une vue magnifique en haut de la montagne et que nous nous étions assis en méditation pendant un moment. J'ai réalisé que j'avais encore des photos sur mon téléphone. Quand je les ai sorties pour les montrer, étrangement, toutes les photos étaient devenues des taches jaunes.</p>
+<p>&quot;Peut-être que tu as accidentellement couvert l'objectif de la caméra en prenant les photos&quot;, a dit la fille.</p>
+<p>&quot;Hmm... peut-être que les secrets célestes ne doivent pas être divulgués.&quot;</p>
+<p>Le dîner était copieux. La propriétaire et la fille ont été occupées un moment en cuisine. Vers l'heure du repas, le frère de la fille et sa future belle-sœur sont arrivés. Nous avons dressé une grande table ronde dans le petit hall de l'hôtel. Nous avons partagé un repas avec cette famille et moi. L'atmosphère était chaleureuse et il n'y avait aucune gêne, juste un sentiment de joie.</p>
+<p>La propriétaire a célébré le fait que j'aie rencontré le maître accompli et que je sois revenu en sécurité. Selon elle, tout le monde pourrait bénéficier un peu d'énergie spirituelle. Ensuite, elle a apporté une grande bouteille de liqueur de prunelles à la cuisine et nous avons tous trinqué. Grâce à l'alcool, j'ai partagé de nouveau mon expérience de la montagne en détails.</p>
+<p>&quot;Donc le sage a pointé le scarabée avec son doigt et il a volé hors d'ici ?&quot; a demandé le frère.</p>
+<p>&quot;Avant ça, tu as dit que c'était un papillon géant, non ?&quot; la fille s'est tournée vers moi.</p>
+<p>&quot;J'ai oublié, de toute façon, c'était juste un insecte volant&quot;, ai-je gratté ma tête, j'ai fait un geste de la main pour montrer la taille, &quot;comme ça !&quot;</p>
+<p>La propriétaire tenait bien l'alcool, elle a bu plusieurs verres sans montrer de signe d'ivresse. Le frère de la fille était honnête et sincère, sa future femme, qui n'était pas encore sa femme, était une femme douce et locale. Au contraire, La fille était plus dynamique, elle était le pilier de l'ambiance. Cela semblait qu'elles étaient tellement désireuses d'une soirée animée après leurs jours ordinaires. Le dîner a commencé à six heures de l'après-midi et a duré jusqu'à plus de neuf heures du soir.</p>
+<p>&quot;Si on chantait ?&quot; a-t-elle proposé.</p>
+<p>&quot;Il n'y a pas de KARAOK ici, pas de micros ni d'enceintes. Comment chantons-nous ?&quot;, j'ai plaisanté.</p>
+<p>&quot;Pourquoi pas ?&quot; Elle a fouillé dans son petit sac à dos et en a sorti un microphone géant, comme par magie. &quot;Micro et haut-parleur tout-en-un. On peut chanter en connectant simplement le téléphone en Bluetooth, c'est super.&quot;</p>
+<p>&quot;C'est de la haute technologie !&quot; j'étais ébahi.</p>
+<p>La propriétaire semblait très expérimentée, elle n'était pas du tout gênée quand elle a chanté une version aiguë de &quot;Le Rêve du Papillon d'Amour&quot;. Sa voix a tremblé à la fin de la note la plus haute, j'étais en tension à chaque seconde, craignant qu'elle ne chante faux, mais ce ne fut pas le cas. Quand la chanson s'est terminée, la fille a fait une grimace et roulé des yeux, j'ai applaudis gêné.</p>
+<p>&quot;Viens, à toi de jouer maintenant.&quot; Elle m'a tendu le micro.</p>
+<p>J'ai suivi les instructions de la fille pour connecter le micro à mon téléphone en Bluetooth, &quot;Je dois d'abord regarder quelles chansons je peux chanter... Donne-moi une minute.&quot;</p>
+<p>J'ai fouillé ma liste de chansons dans mon téléphone, mais au moment où je suis passé à la deuxième page, le téléphone a sonné, un numéro inconnu m'a appelé. La sonnerie est passée à travers le micro et toute la pièce pouvait l'entendre. J'ai répondu avec appréhension.</p>
+<p>&quot;Allô, bonsoir&quot;, ai-je dit.</p>
+<p>&quot;Bonsoir, votre chauffeur sera là dans 3 minutes. Veuillez vous préparer à monter en voiture.&quot; Une voix grave a parlé, son ton était indéniable, bien que son accent soit étrange. L'effet sonore du micro était incroyable, la voix magique emplissait la pièce, et les deux derniers mots, &quot;monter en voiture&quot;, résonnaient avec un écho.</p>
+<p>Il n'a pas dit un mot de plus et a raccroché. J'étais perplexe.</p>
+<p>&quot;À en juger par le ton, ça a l'air important... Pourquoi ne vas-tu pas te préparer ?&quot; la fille m'a conseillé sérieusement.</p>
+<p>&quot;Pourquoi devrais-je partir ? Qui est-ce de toute façon ? Je ne partirai pas.&quot; J'étais très contrarié par cette attitude impolie. Il suffit de se présenter, d'expliquer la situation, de demander mon consentement. Est-ce si difficile ? J'aurais peut-être même été ravi d'accepter. Cette manière de faire est tout simplement inacceptable.</p>
+<p>&quot;Tu ne reconnais pas cette personne ?&quot;, elle est venue voir le numéro de téléphone sur mon téléphone, comme si elle pouvait reconnaître ce numéro.</p>
+<p>&quot;Je n'ai aucune idée d'où cela vient...&quot;</p>
+<p>&quot;Peut-être que c'est une bonne chose ? Il a dit 'votre', cela semble être un signe de respect.&quot; a dit le frère de la fille.</p>
+<p>&quot;C'est parce que tu as rencontré un sage, donc un grand patron t'invite à lui poser des questions ?&quot; la propriétaire a dit.</p>
+<p>Je n'étais pas intéressé par ces conjectures sans fondement, ce n'étaient d'aucune utilité. Je soupçonne que cela pourrait être lié à &quot;Lin&quot;. Antoine m'a dit que des ennuis pourraient surgir, le moine m'a dit que les ennuis me trouveraient bientôt et qu'il n'y avait aucun moyen d'y échapper. Plutôt que de fuir, pourquoi ne pas affronter la difficulté...</p>
+<p>Absurde, n'est-ce pas ? L'un est une personne du rêve, l'autre du monde des esprits, et je crois en eux.</p>
+<p>&quot;Peu importe, je n'ai rien à cacher, je n'ai pas peur des fantômes frappant à ma porte. Allons voir.&quot; Je l'ai dit avec insatisfaction, j'ai fait la moue et je suis retourné dans ma chambre pour faire mes bagages. Mes affaires étaient simples, j'ai mis une minutes à faire mon sac. Lorsque je suis sorti de ma chambre à nouveau, la famille de la propriétaire m'attendait dans le hall de l'hôtel. L'ambiance de la fête avait disparu, la future belle-sœur du frère de la fille aidait à ranger les plats et le frère de la fille emballait ses affaires pour rentrer chez lui. La porte était grande ouverte et il faisait sombre dehors, la lune se cachait discrètement.</p>
+<p>Une berline noire est arrivée comme prévu et s'est arrêtée doucement devant la porte. C'était comme un requin s'approchant doucement de sa proie, sans hâte ni hésitation, léger et solide. Le conducteur n'est pas sorti de la voiture, j'ai entendu un léger bruit de porte du côté du passager, puis j'ai entendu un &quot;clac&quot; quand la porte s'est fermée. Accompagné de pas lourds, une silhouette est apparue lentement depuis l'arrière de la voiture.</p>
+<p>Je pensais que dans ce genre de situation, une ou plusieurs personnes portant des costumes noirs, des cravates et des lunettes de soleil apparaîtraient nécessairement pour souligner le mystère et la discipline de l'organisation. C'était ce que j'attendais d'après la voix grave au téléphone.</p>
+<p>Quand j'ai dit qu'une silhouette s'était apparue derrière la voiture, c'était inexact. En fait, pour être plus précis, une chemise à fleurs à manches courtes et un short d'été d'Hawaï ont émergé. Oui, vous avez bien lu. Une scène aussi étrange, un vêtement à fleurs accrocheur et des shorts d'Hawaï suspendus dans les airs de la nuit noire. Il n'y avait pas de tête, pas de membres, juste une chemise à fleurs voyante et des shorts d'Hawaï accrochés dans l'air, venant de derrière la voiture. J'ai eu la chair de poule. Derrière moi, j'ai entendu un &quot;Oh !&quot; de surprise.</p>
+<p>La silhouette du fantôme vêtu d'une chemise à fleurs à manches courtes et d'un short d'été d'Hawaï restait suspendue dans les airs, se dirigeant vers la voiture, s'arrêtant un instant, puis tournant en cercle comme s'il observait son environnement. Soudain, face à nous - si elle avait un &quot;visage&quot; - quelque chose de brillant et blanc émergea au-dessus de la chemise à fleurs, puis ce furent apparemment des yeux qui apparurent. Finalement, dans la lumière du toit de la maison, le fantôme étrange se révéla enfin.</p>
+<p>Un homme grand, à la peau foncée, vêtu d'une chemise à fleurs à manches courtes et d'un short d'été d'Hawaï, dont la peau se fondait avec la nuit noire à l'extérieur. Il était bien connu que le risque d'accidents de la route impliquant des hommes noirs était élevé la nuit, et cela avait du sens.</p>
+<p>Il afficha un sourire joyeux, le blanc éclatant que nous avions vu tout à l'heure était sans aucun doute ses dents blanches. Il se dirigea vers nous d'un pas assuré, sa tête rasée brillant à la lumière. En raison de sa grande taille, il dut légèrement baisser la tête en entrant, et une fois dans le hall de l'hôtel, je sentis que l'espace diminuait de moitié.</p>
+<p>&quot;Bonsoir !&quot; il leva la main pour me saluer chaleureusement, puis agita les doigts, offrant un sourire radieux à tous les autres dans la pièce.</p>
+<p>&quot;Bonsoir, mais QUI êtes-vous ?&quot; mon français était suffisamment bon pour poser cette question.</p>
+<p>&quot;我叫Abdel，你们可以叫我阿布。（Je m'appelle Abdel, vous pouvez m'appeler Abou.）&quot; Son chinois devait être passable, mais son accent était mauvais, un chinois d'étranger, parlé lentement et un peu confusément. &quot;Je suis ici pour vous emmener.&quot;</p>
+<p>Je me sentais ennuyé et lui demandai pourquoi il ne parlait pas français, après tout, je n'étais pas incapable de le faire.</p>
+<p>&quot;Non, non, j'apprends le chinois.&quot; Le grand homme noir parut un peu timide.</p>
+<p>&quot;D'accord. Où allons-nous ?&quot;</p>
+<p>&quot;Je ne peux pas le dire.&quot; Il sourit encore largement, comme s'il racontait quelque chose de joyeux.</p>
+<p>&quot;Que me voulez-vous ?&quot;</p>
+<p>&quot;Je ne peux pas le dire.&quot; Il garda son sourire béat, pas celui d'un sourire professionnel mais un sourire naturel.</p>
+<p>&quot;Combien de temps cela prendra-t-il ? Peut-être pouvez-vous me le dire ?&quot;</p>
+<p>&quot;Eh bien... c'est une question difficile...&quot; Il leva les sourcils en réfléchissant. &quot;Je... ne sais pas. Désolé.&quot;</p>
+<p>&quot;Et pourquoi devrais-je partir ? Et si je ne veux pas ?&quot; J'étais déjà assez en colère.</p>
+<p>&quot;Eh bien... il vaut mieux partir, sinon ça pourrait... être compliqué. La société pourrait utiliser diverses méthodes, il y aura des procédures. Vos actifs sur vos comptes bancaires... en Chine et en France, pourraient être gelés. Il y aura beaucoup d'autres conséquences.&quot; Abdel se gratta le crâne chauve d'un air désolé, puis regarda les autres personnes dans la pièce.</p>
+<p>&quot;Je ne sais pas quelle société vous mentionnez, je n'ai aucun lien avec aucune société.&quot; Un frisson me parcourut le dos, bien que mon compte personnel ne contienne pas beaucoup d'argent, c'était toujours ma sécurité de base pour ne pas finir sans toit ni couvert. Quelle société était-ce, et comment pourraient-ils geler mes comptes ?</p>
+<p>&quot;Vous comprendrez tout en rencontrant le président. Pas besoin de compliquer les choses.&quot;</p>
+<p>&quot;Si vous ne voulez pas partir, personne ne peut vous forcer. Le poste de police n'est pas loin, je peux appeler la police à tout moment.&quot; La propriétaire me dit prudemment à l'arrière, assez fort pour qu'Abdel puisse l'entendre.</p>
+<p>&quot;Ne vous inquiétez pas, il ne lui arrivera rien. Je garantirai sa sécurité en tout temps.&quot; L'homme massif retrouva son sourire joyeux, comme s'il espérait que ce sourire me rassurerait. Mais ce n'était pas le cas.</p>
+<p>&quot;You have my word.&quot; (Vous avez ma parole.) Abdel retira son sourire et me dit sincèrement avec un accent français.</p>
+<p>&quot;D'accord.&quot; Je soupirai.</p>
+<p>&quot;Allons-y alors !&quot; Abdel semblait avoir accompli une tâche immense, souriant encore plus, reculant de quelques pas vers la porte et criant à la pièce, &quot;Madame la propriétaire ! Vous pouvez poser le couteau quand même !&quot;</p>
+<hr />
+<p>La voiture est partie aussi légèrement qu'elle était venue, le chauffeur était un homme en chemise blanche, assis silencieusement derrière le volant, comme une marionnette. Je suis assis seul à l'arrière de la voiture de luxe, Abou est assis à côté du chauffeur du côté passager.</p>
+<p>&quot;Vraiment, tu ne peux pas me le dire ?&quot; j'ai tenté encore une fois ma chance.</p>
+<p>&quot;Je n'ai pas l'autorisation de parler... C'est ainsi que le règlement de l'entreprise fonctionne.&quot; Abou s'est tourné vers moi, et j'ai vu son sourire éclairer ses dents blanches. &quot;Le président lui-même vous parlera.&quot;</p>
+<p>J'ai laissé les clés de ma Ford Focus à la patronne et à la jeune fille de l'hôtel, elles pouvaient l'utiliser comme bon leur semblait, tant que je pouvais la conduire quand je reviendrais. Pas besoin de me rembourser le supplément que j'ai payé pour la chambre, j'en aurais besoin quand je rentrerai.</p>
+<p>&quot;Une fois que j'aurai fini, je reviendrai certainement ici.&quot; J'ai promis à la patronne de l'hôtel et à la jeune fille.</p>
+<p>&quot;Franchement, tu viens de descendre de la montagne, à peine le temps de s'asseoir, et te voilà à nouveau emporté... Franchement...&quot;</p>
+<p>La voiture de luxe roulait de nuit, à l'extérieur les ténèbres, pas de lune cette nuit-là, les roues de la voiture ont d'abord roulé sur le chemin de gravier rural, puis sur la route en béton de la province, maintenant nous devions être sur l'autoroute asphaltée.</p>
+<p>Mon téléphone a vibré légèrement, mon cœur a également fait un bond. Je savais déjà qui m'envoyait un message. J'ai jeté un coup d'œil autour de moi, Abou et le chauffeur étaient dans la cabine, concentrés sur la route éclairée par les phares.</p>
+<p>&quot;Suis leurs instructions, personne ne te fera de mal.&quot; C'était le message de Lin.</p>
+<p>&quot;Est-ce en rapport avec Antoine ?&quot;</p>
+<p>&quot;Il vaudrait mieux que tu dormes un peu, le voyage sera long.&quot;</p>
+</div></body></html>
